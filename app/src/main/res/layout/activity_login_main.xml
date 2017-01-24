@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_login_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.surajm.courier_service_system_app.Activity.Login_mainActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/view"
+        android:background="@drawable/registration_background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/loginprocess"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </ProgressBar>
+
+    <TextView
+        android:id="@+id/member_login_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="User Login"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/textColorPrimary"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:id="@+id/username_edtext_rep"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/loginedittextshape"
+            >
+            <EditText
+                android:id="@+id/username_edtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/member_login_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:padding="10dp"
+                android:background="@null"
+                android:hint="USERNAME"
+                android:inputType="text"
+                android:textStyle="bold" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:id="@+id/password_edtext_rep"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/loginedittextshape">
+            <EditText
+                android:id="@+id/passwd_edtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:padding="10dp"
+                android:background="@null"
+                android:hint="PASSWORD"
+                android:inputType="textPassword"
+                android:textStyle="bold" />
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/btnLogin"
+            android:text="Login"
+            android:textColor="#125688"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/loginbuttonshape"/>
+        <Button
+            android:id="@+id/btnLoginGmail"
+            android:text="Login With Google+"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/logingooglebuttonshape" />
+        <Button
+            android:id="@+id/register_Btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:text="@string/btn_link_to_register"
+            android:textAllCaps="false"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="20sp" />
+        <View
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:background="@color/textColorPrimary"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"></View>
+        <Button
+            android:id="@+id/forgot_passwd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:text="Forgot Password?"
+            android:textAllCaps="false"
+            android:textColor="#ff4c4c"
+            android:textSize="20sp" />
+    </LinearLayout>
+    </ScrollView>
+    <ImageView
+        android:id="@+id/view_1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:duplicateParentState="true"
+        android:src="@drawable/user_icon_white2"
+        android:background="@android:color/transparent"/>
+</RelativeLayout>
