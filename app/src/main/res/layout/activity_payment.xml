@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_payment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c8e4f8"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.surajm.courier_service_system_app.Activity.PaymentActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Portal"
+            android:textAlignment="center"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Request ID : "
+                android:textSize="25dp"
+                android:layout_gravity="center"
+                android:textColor="#000"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RD101010"
+                android:textSize="25dp"
+                android:textColor="#007f00"
+                android:id="@+id/requestIdTextView"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Payable Amount : "
+                android:textSize="25dp"
+                android:layout_gravity="center"
+                android:textColor="#000"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200"
+                android:textSize="25dp"
+                android:id="@+id/amountTextView"
+                android:textColor="#E50000"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/rupee_red"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="3dp"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cash on Hand"
+                    android:id="@+id/coh_RadioButton"
+                    android:textSize="25dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="onRadioButtonClicked"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Net Banking"
+                    android:layout_below="@+id/netBank_RadioButton"
+                    android:id="@+id/byRoad_RadioButton"
+                    android:textSize="25dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_alignLeft="@+id/netBank_RadioButton"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Debit/ Credit Card"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_below="@+id/card_RadioButton"
+                    android:id="@+id/byRail_RadioButton"
+                    android:textSize="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignLeft="@+id/byAir_RadioButton"/>
+            </RadioGroup>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/submit_payment_Button"
+            android:text="Submit"
+            android:layout_marginTop="10dp"
+            android:textColor="#FFFFFFFF"
+            android:textSize="25sp"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+
+            />
+    </LinearLayout>
+
+</FrameLayout>

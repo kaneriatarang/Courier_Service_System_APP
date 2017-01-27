@@ -3,8 +3,13 @@ package com.example.surajm.courier_service_system_app.DatabseBackgroundWorker;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -96,7 +101,7 @@ public class LoginBackWorker extends AsyncTask<String,Void,String> {
                 alertDialog.setMessage("Please Check Your connection and try again...");
                 alertDialog.show();
             }
-            else if (result == "wrong")
+            else if (result.matches("wrong"))
             {
                 alertDialog.setTitle("Login Status");
                 alertDialog.setMessage("Username or Password are wrong...");
@@ -104,7 +109,17 @@ public class LoginBackWorker extends AsyncTask<String,Void,String> {
             }
             else {
                 alertDialog.setTitle("Login Status");
-                alertDialog.setMessage(result);
+                try {
+                    JSONObject json = (JSONObject)new JSONTokener(result).nextValue();
+                    JSONObject myjeson = json.getJSONObject("result");
+                    String nameout = (String)myjeson.get("Name");
+                    Log.d("name",nameout);
+                    alertDialog.setMessage(nameout);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
                 alertDialog.show();
                 Toast.makeText(context, "login process..", Toast.LENGTH_SHORT).show();
             }

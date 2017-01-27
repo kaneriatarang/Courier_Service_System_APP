@@ -1,0 +1,74 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.surajm.courier_service_system_app.Fragments.TabFragments.PickupFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mode of Transport"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="By Air"
+                        android:id="@+id/byAir_RadioButton"
+                        android:textSize="25dp"
+                        android:layout_marginTop="5dp"
+                        />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="By Road"
+                        android:layout_below="@+id/byAir_RadioButton"
+                        android:id="@+id/byRoad_RadioButton"
+                        android:textSize="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_alignLeft="@+id/byAir_RadioButton"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="By Rail"
+                        android:layout_below="@+id/byRoad_RadioButton"
+                        android:id="@+id/byRail_RadioButton"
+                        android:textSize="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_alignLeft="@+id/byAir_RadioButton"/>
+            </RadioGroup>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/search_office_Button"
+            android:text="Search"
+            android:textColor="#FFFFFFFF"
+            android:textSize="25sp"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+
+            />
+    </LinearLayout>
+
+
+</FrameLayout>

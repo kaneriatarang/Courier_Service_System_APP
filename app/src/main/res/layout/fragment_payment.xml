@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_height="match_parent"
+    android:background="#c8e4f8"
+    tools:context="com.example.surajm.courier_service_system_app.Fragments.TabFragments.PaymentFragment">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show"
+        android:id="@+id/show"/>
+   <ListView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:dividerHeight="8dp"
+       android:divider="#c8e4f8"
+       android:id="@+id/listViewPayment"></ListView>
+</LinearLayout>

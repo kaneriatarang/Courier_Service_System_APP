@@ -65,9 +65,11 @@
         <activity
             android:name=".Activity.RegistrationActivity"
             android:parentActivityName=".Activity.Login_mainActivity" />
-        <activity android:name=".Activity.SplashActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:noHistory="true"></activity>
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.PaymentActivity"></activity>
     </application>
 
 </manifest>

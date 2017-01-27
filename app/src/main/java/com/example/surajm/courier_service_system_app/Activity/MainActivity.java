@@ -23,18 +23,22 @@ import android.widget.Toast;
 import com.example.surajm.courier_service_system_app.Fragments.HomeFragment;
 import com.example.surajm.courier_service_system_app.Fragments.NotificationsFragment;
 import com.example.surajm.courier_service_system_app.Fragments.SettingsFragment;
+import com.example.surajm.courier_service_system_app.Other.ConsinementDetails;
 import com.example.surajm.courier_service_system_app.R;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static ArrayList<ConsinementDetails> ConsinmentList = new ArrayList<>();
     private NavigationView navigationView;
     private DrawerLayout drawer;
     private View navHeader;
     private ImageView imgNavHeaderBg, imgProfile;
     private TextView txtName, txtWebsite;
     private Toolbar toolbar;
-    private FloatingActionButton fab;
+//    private FloatingActionButton fab;
 
     // index to identify current nav menu item
     public static int navItemIndex = 0;
@@ -75,14 +79,14 @@ public class MainActivity extends AppCompatActivity
         // load toolbar titles from string resources
         activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
 
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
         // load nav menu header data
         loadNavHeader();
@@ -158,7 +162,7 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawers();
 
             // show or hide the fab button
-            toggleFab();
+//            toggleFab();
             return;
         }
 
@@ -184,8 +188,8 @@ public class MainActivity extends AppCompatActivity
             mHandler.post(mPendingRunnable);
         }
 
-        // show or hide the fab button
-        toggleFab();
+//        // show or hide the fab button
+//        toggleFab();
 
         //Closing drawer on item click
         drawer.closeDrawers();
@@ -355,13 +359,13 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    // show or hide the fab
-    private void toggleFab() {
-        if (navItemIndex == 0)
-            fab.show();
-        else
-            fab.hide();
-    }
+//    // show or hide the fab
+//    private void toggleFab() {
+//        if (navItemIndex == 0)
+//            fab.show();
+//        else
+//            fab.hide();
+//    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
